@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <h2>Elenco Scarpe</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Prezzo</th>
+                <th>Descrizione</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach (var scarpe in Model)
+            {
+                <tr>
+                    <td>@scarpe.Id</td>
+                    <td>@scarpe.Nome</td>
+                    <td>@scarpe.Prezzo</td>
+                    <td>@scarpe.Descrizione</td>
+                    <td>
+                        <a asp-controller="Scarpe" asp-action="Edit" asp-route-id="@scarpe.Id">Modifica</a>
+                    </td>
+                </tr>
+            }
+             
+        </tbody>
+    </table>
+    </div>

@@ -1,0 +1,20 @@
+﻿@model S5L3.Models.Products
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" /><br />
+
+    <label asp-for="Nome"></label>
+    <input type="text" asp-for="Nome" required /><br />
+
+    <label asp-for="Prezzo"></label>
+    <input type="number" asp-for="Prezzo" step="0.01" required /><br />
+
+    <label asp-for="Descrizione"></label>
+    <input type="text" asp-for="Descrizione" required /><br />
+
+    <button class="btn btn-primary">Salva</button>
+</form>
